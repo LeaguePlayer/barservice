@@ -1,23 +1,928 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="eFn-yh-LkQ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Initial Sliding View Controller-->
+        <scene sceneID="NHy-Tu-9mD">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <viewController id="eFn-yh-LkQ" customClass="InitialSlidingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VZO-Ua-tIH"/>
+                        <viewControllerLayoutGuide type="bottom" id="GM5-Nw-e1N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="00n-eB-TpZ">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="topViewControllerStoryboardId" value="MainView"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="underLeftViewControllerStoryboardId" value="MenuViewController"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4yJ-vI-gjR" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1944" y="-1042"/>
+        </scene>
+        <!--Main Controller - Bar Service-->
+        <scene sceneID="A0X-06-rLf">
+            <objects>
+                <viewController id="WMA-9m-5cF" customClass="MainController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B27-Ab-N7f"/>
+                        <viewControllerLayoutGuide type="bottom" id="QyO-CU-Y5f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cWy-lB-7VG">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dmv-E2-Enu" userLabel="gallery">
+                                <rect key="frame" x="0.0" y="64" width="768" height="697"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.70980393890000004" green="0.69019609689999994" blue="0.69019609689999994" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xzW-3T-O7L" userLabel="ButtonIceMan">
+                                <rect key="frame" x="0.0" y="959" width="768" height="65"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hjY-6R-KZQ">
+                                        <rect key="frame" x="104" y="0.0" width="664" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ice Man" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNx-oC-lQo">
+                                                <rect key="frame" x="20" y="6" width="62" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="625" translatesAutoresizingMaskIntoConstraints="NO" id="lYC-62-Li3">
+                                                <rect key="frame" x="19" y="24" width="625" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                <string key="text">производство пищевого
+льда</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="qvW-eq-SuA">
+                                                <rect key="frame" x="645" y="28" width="8" height="12"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.89019614459999996" green="0.55686277149999996" blue="0.46274513010000001" alpha="1" colorSpace="deviceRGB"/>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo4.png" translatesAutoresizingMaskIntoConstraints="NO" id="Toa-N2-pjN">
+                                        <rect key="frame" x="11" y="14" width="75" height="31"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94117653369999998" green="0.91372555489999996" blue="0.86666673419999996" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Krg-KG-Ovi" userLabel="ButtonPartyBus">
+                                <rect key="frame" x="0.0" y="893" width="768" height="65"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4bu-cp-PDh">
+                                        <rect key="frame" x="104" y="0.0" width="664" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Party Bus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdO-3p-upW">
+                                                <rect key="frame" x="20" y="10" width="69" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="625" translatesAutoresizingMaskIntoConstraints="NO" id="BQb-Qm-b5s">
+                                                <rect key="frame" x="19" y="23" width="625" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                <string key="text">ночной клуб на колесах
+</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="BSy-QA-OAj">
+                                                <rect key="frame" x="645" y="28" width="8" height="12"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.63529413940000001" green="0.41960787770000002" blue="0.38823533059999998" alpha="1" colorSpace="deviceRGB"/>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo3.png" translatesAutoresizingMaskIntoConstraints="NO" id="C0p-G8-B5k">
+                                        <rect key="frame" x="22" y="14" width="55" height="37"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94117653369999998" green="0.91372555489999996" blue="0.86666673419999996" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0sS-04-6iZ" userLabel="ButtonPartyBus">
+                                <rect key="frame" x="0.0" y="761" width="768" height="65"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nec-rd-0UP">
+                                        <rect key="frame" x="104" y="0.0" width="664" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOM-dR-MgC">
+                                                <rect key="frame" x="20" y="10" width="88" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Grannys Bar
+</string>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="бронирование столика" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="625" translatesAutoresizingMaskIntoConstraints="NO" id="hqm-FO-YfV">
+                                                <rect key="frame" x="19" y="23" width="625" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="qGD-8d-1hQ">
+                                                <rect key="frame" x="645" y="28" width="8" height="12"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.43529415129999999" green="0.37254902719999999" blue="0.36078432199999999" alpha="1" colorSpace="deviceRGB"/>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="JTi-Qo-Mgu">
+                                        <rect key="frame" x="20" y="14" width="61" height="38"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94117653369999998" green="0.91372555489999996" blue="0.86666673419999996" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GcQ-uG-er1" userLabel="ButtonBarService">
+                                <rect key="frame" x="0.0" y="827" width="768" height="65"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kSJ-1n-UGY">
+                                        <rect key="frame" x="104" y="0.0" width="664" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bar Service" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcq-BW-4sa">
+                                                <rect key="frame" x="20" y="6" width="81" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="625" translatesAutoresizingMaskIntoConstraints="NO" id="CMB-p6-HCg">
+                                                <rect key="frame" x="19" y="24" width="625" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                <string key="text">школа барменов,
+выездной бар</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="6i8-cq-tIf">
+                                                <rect key="frame" x="645" y="28" width="8" height="12"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.50980395079999996" green="0.36470589040000001" blue="0.36078432199999999" alpha="1" colorSpace="deviceRGB"/>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="8el-PT-87S">
+                                        <rect key="frame" x="26" y="13" width="51" height="41"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94117653369999998" green="0.91372555489999996" blue="0.86666673419999996" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q6g-fK-btb" userLabel="line">
+                                <rect key="frame" x="0.0" y="958" width="768" height="1"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.64313727620000005" green="0.43529415129999999" blue="0.40784317260000003" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dW0-2z-VPC" userLabel="line">
+                                <rect key="frame" x="0.0" y="826" width="768" height="1"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.43529415129999999" green="0.37254902719999999" blue="0.36078432199999999" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sP9-Ep-Z2f" userLabel="line">
+                                <rect key="frame" x="0.0" y="892" width="768" height="1"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.50980395079999996" green="0.36470589040000001" blue="0.36078432199999999" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Bar Service" id="LAi-oZ-hSk"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="buttonToBarService" destination="GcQ-uG-er1" id="Kil-cj-QgA"/>
+                        <outlet property="buttonToGrannys" destination="0sS-04-6iZ" id="8nU-4c-ZTh"/>
+                        <outlet property="buttonToIceMan" destination="xzW-3T-O7L" id="qbz-oy-6wn"/>
+                        <outlet property="buttonToPartyBus" destination="Krg-KG-Ovi" id="atP-Gz-ZWq"/>
+                        <outlet property="galleryView" destination="dmv-E2-Enu" id="dlY-eu-PX2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k2C-vP-fc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="449" y="1058"/>
+        </scene>
+        <!--List Table Barservice View Controller - Bar Service-->
+        <scene sceneID="JfM-YY-MN6">
+            <objects>
+                <viewController storyboardIdentifier="barservice" id="e67-gC-pQu" customClass="ListTableBarserviceViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oAa-2a-qwD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xcc-vu-856"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uy8-YB-z1c">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bar Service" id="vMv-xG-nJg">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="nGF-Ip-ztb">
+                            <connections>
+                                <segue destination="gII-2r-5Ly" kind="unwind" unwindAction="unwindToMenuViewController:" id="1hk-hb-Nc6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="apiValue" value="about"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VIR-kq-9JY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="gII-2r-5Ly" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1706" y="1386"/>
+        </scene>
+        <!--List Table Barservice View Controller - Учебный центр-->
+        <scene sceneID="o4O-u1-Mps">
+            <objects>
+                <viewController storyboardIdentifier="b_school" id="RbT-Ul-tIk" customClass="ListTableBarserviceViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H4E-om-JoD"/>
+                        <viewControllerLayoutGuide type="bottom" id="D1f-XK-EGW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ahm-8w-UZY">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Учебный центр" id="BBc-lQ-Ht5">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="6dB-GC-L0G">
+                            <connections>
+                                <segue destination="IT0-Gt-Tyj" kind="unwind" unwindAction="unwindToMenuViewController:" id="5dB-tn-7E0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="apiValue" value="school"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sbz-Ja-Jd3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="IT0-Gt-Tyj" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1325" y="3099"/>
+        </scene>
+        <!--List Table Barservice View Controller - Выездной бар-->
+        <scene sceneID="S2G-2B-YzO">
+            <objects>
+                <viewController storyboardIdentifier="b_events" id="8yH-xv-DDr" customClass="ListTableBarserviceViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7yk-jG-rJQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="HBS-8h-oit"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MLB-2N-kYL">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Выездной бар" id="6DV-XQ-wtH">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="1pe-I4-hYL">
+                            <connections>
+                                <segue destination="GaB-3F-dhb" kind="unwind" unwindAction="unwindToMenuViewController:" id="0zf-B6-I5z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="apiValue" value="events"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oJi-Rs-LWS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="GaB-3F-dhb" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1713" y="2791"/>
+        </scene>
+        <!--Place Barservice Controller - Где находимся-->
+        <scene sceneID="rvM-Fs-mk3">
+            <objects>
+                <viewController storyboardIdentifier="b_place" id="HZ9-8f-oFz" customClass="PlaceBarserviceController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7eL-df-qOv"/>
+                        <viewControllerLayoutGuide type="bottom" id="oGJ-t7-2Dq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PBf-lu-eW9">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Где находимся" id="rQd-bC-tzY">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Uwp-hk-zqd">
+                            <connections>
+                                <segue destination="lin-yM-iFn" kind="unwind" unwindAction="unwindToMenuViewController:" id="MON-kx-cSA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqD-Cv-K0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="lin-yM-iFn" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2125" y="2695"/>
+        </scene>
+        <!--List Table Barservice View Controller - Магазин-->
+        <scene sceneID="znU-Ym-QrX">
+            <objects>
+                <viewController storyboardIdentifier="b_shop" id="sDk-kT-UCU" customClass="ListTableBarserviceViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eUb-nM-iln"/>
+                        <viewControllerLayoutGuide type="bottom" id="tsC-VU-fBk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xvy-Zm-9ae">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Магазин" id="wd2-PH-KN8">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="5oK-il-gSR">
+                            <connections>
+                                <segue destination="9uA-Js-DEx" kind="unwind" unwindAction="unwindToMenuViewController:" id="0Rx-KO-NMN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="apiValue" value="shop"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TZ0-g5-fvb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="9uA-Js-DEx" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1706" y="2075"/>
+        </scene>
+        <!--Gallery Barservice Controller - Галерея-->
+        <scene sceneID="k7k-of-wBf">
+            <objects>
+                <viewController storyboardIdentifier="b_gallery" id="XlH-hY-Mzh" customClass="GalleryBarserviceController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jqi-Pa-zPx"/>
+                        <viewControllerLayoutGuide type="bottom" id="hJw-NN-R65"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="br4-hk-y4v">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Галерея" id="LNT-Tm-dI4">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="CDz-jh-fYm">
+                            <connections>
+                                <segue destination="Gjl-Lo-Vjc" kind="unwind" unwindAction="unwindToMenuViewController:" id="HDW-GG-vXb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zv5-q6-Nyb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Gjl-Lo-Vjc" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2113" y="1944"/>
+        </scene>
+        <!--Order Iceman View Controller - Заказать лед-->
+        <scene sceneID="oL4-xz-QMR">
+            <objects>
+                <viewController storyboardIdentifier="i_order" id="dkK-j8-tji" customClass="OrderIcemanViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="17B-QS-Z3d"/>
+                        <viewControllerLayoutGuide type="bottom" id="gQz-k4-9Mb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ppu-Ke-Tdd">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Заказать лед" id="zZe-Rf-g4m">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="8Zw-k8-VEv">
+                            <connections>
+                                <segue destination="HkF-bm-B22" kind="unwind" unwindAction="unwindToMenuViewController:" id="Qz6-n1-TIa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Md9-RK-dyW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="HkF-bm-B22" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="329" y="2747"/>
+        </scene>
+        <!--View Iceman Controller - О IceMan-->
+        <scene sceneID="fdH-bZ-TtA">
+            <objects>
+                <viewController storyboardIdentifier="iceman" id="mNE-Xa-lRH" customClass="ViewIcemanController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9nJ-nE-pJL"/>
+                        <viewControllerLayoutGuide type="bottom" id="tpm-ZX-fvZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gbv-OS-dng">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="О IceMan" id="Q53-ar-R06">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="iVF-CC-ydO">
+                            <connections>
+                                <segue destination="hCS-py-f8C" kind="unwind" unwindAction="unwindToMenuViewController:" id="tDT-ha-dvI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="apiValue" value="iceman"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="apiType" value="origin"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mBQ-XS-7Us" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hCS-py-f8C" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="329" y="3431"/>
+        </scene>
+        <!--View Iceman Controller - Контакты-->
+        <scene sceneID="0WU-PO-0cQ">
+            <objects>
+                <viewController storyboardIdentifier="i_contacts" id="mml-5H-YeS" customClass="ViewIcemanController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MbU-Uz-AJF"/>
+                        <viewControllerLayoutGuide type="bottom" id="oT5-ux-ah4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kiG-8m-Gnc">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Контакты" id="sVB-Yx-gRW">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="V3u-mh-n2b">
+                            <connections>
+                                <segue destination="8N1-lp-Cji" kind="unwind" unwindAction="unwindToMenuViewController:" id="qiT-Md-vpS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="apiValue" value="iceman"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="apiType" value="contacts"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MeY-v1-e7I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="8N1-lp-Cji" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="709" y="3431"/>
+        </scene>
+        <!--Place Iceman Controller - Точки продаж-->
+        <scene sceneID="WFd-Hc-udn">
+            <objects>
+                <viewController storyboardIdentifier="i_place" id="qBr-hy-mO1" customClass="PlaceIcemanController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S0w-vb-oH4"/>
+                        <viewControllerLayoutGuide type="bottom" id="eQE-uP-LXe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zgn-0W-3P7">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Точки продаж" id="xyY-h6-VaB">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="zlC-c2-Wru"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uVh-4C-g0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693" y="2719"/>
+        </scene>
+        <!--Gallery Partybus Controller -  Галерея-->
+        <scene sceneID="yrE-em-mqj">
+            <objects>
+                <viewController storyboardIdentifier="p_gallery" id="EkC-8a-Dn3" customClass="GalleryPartybusController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TYB-pz-T82"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Sv-mm-PMB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MZT-Du-SZQ">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title=" Галерея" id="dNt-Sr-8Y0">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="QOU-6m-2VG">
+                            <connections>
+                                <segue destination="4bf-dx-fEJ" kind="unwind" unwindAction="unwindToMenuViewController:" id="rld-DZ-zER"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PjL-sV-S32" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="4bf-dx-fEJ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1236" y="2489"/>
+        </scene>
+        <!--Order Partybus Controller - Заказ Party Bus-->
+        <scene sceneID="jJZ-yQ-Dde">
+            <objects>
+                <viewController storyboardIdentifier="p_order" id="Sng-CW-g7l" customClass="OrderPartybusController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EyU-t7-16U"/>
+                        <viewControllerLayoutGuide type="bottom" id="bTP-Ef-2LF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WTc-K1-kgJ">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Заказ Party Bus" id="Uza-eU-tqU">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="use-xh-5mn">
+                            <connections>
+                                <segue destination="8s1-uW-DVV" kind="unwind" unwindAction="unwindToMenuViewController:" id="zIZ-27-qCU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ro-QF-wM3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="8s1-uW-DVV" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-808" y="2991"/>
+        </scene>
+        <!--Info Party Bus Controller - Party Bus-->
+        <scene sceneID="3WA-0F-QKc">
+            <objects>
+                <viewController storyboardIdentifier="partybus" id="Vsx-hQ-tWW" customClass="InfoPartyBusController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gde-2E-Rwk"/>
+                        <viewControllerLayoutGuide type="bottom" id="fYS-sf-qgG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FUy-GL-zrP">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Party Bus" id="Xe8-VR-YPg">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Ifo-v7-eiU">
+                            <connections>
+                                <segue destination="Vlb-x2-EEk" kind="unwind" unwindAction="unwindToMenuViewController:" id="ey7-Cg-FkT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SwR-bX-lKF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Vlb-x2-EEk" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-819" y="2245"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UzI-km-6KN">
+            <objects>
+                <viewController storyboardIdentifier="he" id="FQG-Vm-ogq" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xwN-ys-sOP"/>
+                        <viewControllerLayoutGuide type="bottom" id="72f-yl-e0c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zTA-ro-z0n">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HELLO! " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LN6-WB-gQd">
+                                <rect key="frame" x="128" y="171" width="65" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zBf-lB-1PI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="257" y="2085"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="dXN-Zu-Pne">
+            <objects>
+                <tableViewController storyboardIdentifier="MenuViewController" id="ywq-pO-G7R" customClass="MenuViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="T1D-OT-yPa">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="44" id="KxI-Gz-sjC" customClass="MenuCell">
+                                <rect key="frame" x="0.0" y="55" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KxI-Gz-sjC" id="f4Z-oi-5r8">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Перейти к бронированию столика" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="251" translatesAutoresizingMaskIntoConstraints="NO" id="GUd-so-jAf">
+                                            <rect key="frame" x="58" y="11" width="251" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.98392939130000001" green="0.98794704349999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon1.png" translatesAutoresizingMaskIntoConstraints="NO" id="rBP-vT-3Kr">
+                                            <rect key="frame" x="20" y="8" width="23" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kzh-I2-IDE">
+                                            <rect key="frame" x="58" y="43" width="262" height="1"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.4274510145" green="0.40784317260000003" blue="0.38431376220000002" alpha="1" colorSpace="deviceRGB"/>
+                                        </view>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellLine" destination="Kzh-I2-IDE" id="pmT-v4-izg"/>
+                                    <outlet property="cellTitle" destination="GUd-so-jAf" id="9yV-hV-9Db"/>
+                                    <outlet property="imageCell" destination="rBP-vT-3Kr" id="YtA-x2-rHl"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ywq-pO-G7R" id="pxR-gM-Rof"/>
+                            <outlet property="delegate" destination="ywq-pO-G7R" id="NBf-DL-Uv6"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x6L-vv-Q1X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-337" y="49"/>
+        </scene>
+        <!--Info Grannys View Controller - Grannys Bar-->
+        <scene sceneID="eSg-bg-ck4">
+            <objects>
+                <viewController storyboardIdentifier="grannys" id="DAa-iB-Q9F" customClass="InfoGrannysViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gJ4-FE-a8N"/>
+                        <viewControllerLayoutGuide type="bottom" id="aeX-Od-b7g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RlQ-pC-lcf">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Grannys Bar" id="zeB-ba-8Pl">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="jX4-bR-tdp">
+                            <connections>
+                                <segue destination="KpY-PH-aCJ" kind="unwind" unwindAction="unwindToMenuViewController:" id="mLW-DH-Gdj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yqA-W0-VCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="KpY-PH-aCJ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="931" y="234"/>
+        </scene>
+        <!--Order Grannys Controller - Бронирование-->
+        <scene sceneID="kRw-eF-9ev">
+            <objects>
+                <viewController storyboardIdentifier="g_order" id="JGr-GF-W9Q" customClass="OrderGrannysController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pRM-xd-zFb"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lg4-OI-AxK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eR5-K1-5mc">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Бронирование" id="0HD-SK-eHL">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Ga6-ZK-0YQ"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nf4-j0-Xy1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1551" y="-423"/>
+        </scene>
+        <!--Place Grannys Controller - Где находимся-->
+        <scene sceneID="e57-cQ-4xs">
+            <objects>
+                <viewController storyboardIdentifier="g_place" id="3QY-Ll-fMB" customClass="PlaceGrannysController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ehy-m4-Del"/>
+                        <viewControllerLayoutGuide type="bottom" id="fov-2h-Fxe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p3j-qx-5Ac">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7X9-zh-MdD">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Где находимся" id="uOm-hC-qTe">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="eJf-tY-8bF">
+                            <connections>
+                                <segue destination="lhx-lQ-bB3" kind="unwind" unwindAction="unwindToMenuViewController:" id="qqx-I1-5N5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="map" destination="7X9-zh-MdD" id="1Je-JW-oad"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f5V-p8-kKi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="lhx-lQ-bB3" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1881" y="582"/>
+        </scene>
+        <!--Board Menu Controller - Меню-->
+        <scene sceneID="CNI-9M-iCq">
+            <objects>
+                <viewController storyboardIdentifier="g_menu" id="PCI-2l-hcp" customClass="BoardMenuController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jca-VC-1YA"/>
+                        <viewControllerLayoutGuide type="bottom" id="a6c-hT-sRq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CQv-vg-Fwz">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Меню" id="09W-3b-Sfk">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="6xk-1G-S8T">
+                            <connections>
+                                <segue destination="cop-l7-jHR" kind="unwind" unwindAction="unwindToMenuViewController:" id="XvI-QZ-ikT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UHU-LC-aOU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="cop-l7-jHR" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2618" y="195"/>
+        </scene>
+        <!--Navigration Controller-->
+        <scene sceneID="z2o-9J-TC2">
+            <objects>
+                <navigationController storyboardIdentifier="MainView" automaticallyAdjustsScrollViewInsets="NO" id="J3o-9v-v7U" customClass="NavigrationController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="bVI-Sh-kPJ">
+                        <barButtonItem key="rightBarButtonItem" title="Home" id="PBO-R3-N1K"/>
+                    </navigationItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b2f-ak-UF2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WMA-9m-5cF" kind="relationship" relationship="rootViewController" id="K3Z-ZE-Fh4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Go4-BV-DCL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationItem title="grannys" id="MOS-Kr-aI1">
+                    <barButtonItem key="leftBarButtonItem" title="Menu" id="P0F-UG-Kj6"/>
+                </navigationItem>
+            </objects>
+            <point key="canvasLocation" x="-1371" y="1114"/>
+        </scene>
+        <!--Gallery Grannys Controller - Галерея-->
+        <scene sceneID="9kS-a3-FLb">
+            <objects>
+                <viewController storyboardIdentifier="g_gallery" id="P8C-67-ZGZ" userLabel="Gallery Grannys Controller - Галерея" customClass="GalleryGrannysController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PQl-ur-3jc"/>
+                        <viewControllerLayoutGuide type="bottom" id="ghX-hZ-MZW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jv2-9u-wsL">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Галерея" id="FZA-1L-RR1">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="p36-uN-fVG">
+                            <connections>
+                                <segue destination="BUe-BP-cnJ" kind="unwind" unwindAction="unwindToMenuViewController:" id="RKu-3m-33y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uzN-0o-It5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="BUe-BP-cnJ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1951" y="-218"/>
+        </scene>
+        <!--Video Grannys Controller - Видео Grannys Bar-->
+        <scene sceneID="KPT-wx-PBr">
+            <objects>
+                <viewController storyboardIdentifier="g_video" id="WHh-R8-pJt" customClass="VideoGrannysController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="azh-05-n7Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y37-nJ-xyS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j7s-GL-yjD">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Видео Grannys Bar" id="CCJ-pf-XKC">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="U1G-97-3Dh">
+                            <connections>
+                                <segue destination="Iwg-P0-v12" kind="unwind" unwindAction="unwindToMenuViewController:" id="JNl-Fg-rFy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xH0-h7-kuk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Iwg-P0-v12" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2446" y="-485"/>
+        </scene>
+        <!--Videos Barservice Controller - Видео Bar Service-->
+        <scene sceneID="NUj-Ns-YEW">
+            <objects>
+                <viewController storyboardIdentifier="b_video" id="OuG-um-See" customClass="VideosBarserviceController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d05-Pv-7VA"/>
+                        <viewControllerLayoutGuide type="bottom" id="SEY-bf-Ycq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xyh-Ha-Oyf">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Видео Bar Service" id="D6x-SD-Blu">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="jhw-km-xNs">
+                            <connections>
+                                <segue destination="42I-Fi-eBh" kind="unwind" unwindAction="unwindToMenuViewController:" id="oSr-1M-ewh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ro0-DQ-KSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="42I-Fi-eBh" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2530" y="2151"/>
+        </scene>
+        <!--Video Party Bus Controller - Видео Party Bus-->
+        <scene sceneID="nug-UO-ey0">
+            <objects>
+                <viewController storyboardIdentifier="p_video" id="wx9-tf-hKW" customClass="VideoPartyBusController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k7T-vC-Tnx"/>
+                        <viewControllerLayoutGuide type="bottom" id="dNf-vq-o9h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TY9-By-MYm">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Видео Party Bus" id="08b-Nh-PJz">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="9nN-IJ-KAy">
+                            <connections>
+                                <segue destination="B7N-a8-Ssr" kind="unwind" unwindAction="unwindToMenuViewController:" id="3YI-6p-Lxg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NQz-W4-nKA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="B7N-a8-Ssr" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-278" y="2427"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.png" width="8" height="12"/>
+        <image name="icon1.png" width="23" height="27"/>
+        <image name="logo1.png" width="61" height="38"/>
+        <image name="logo2.png" width="51" height="41"/>
+        <image name="logo3.png" width="55" height="37"/>
+        <image name="logo4.png" width="75" height="31"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -14,3 +14,73 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+
+// API
+#define domain_server_api @"http://grannys.amobile-studio.ru"
+#define application_key_value @"dcCAdFiSBb"
+
+// работаем с боковым меню
+// grannys
+#define menuGrannys @[@"О заведении", @"Фотогалерея", @"Видео", @"Забронировать столик", @"Меню", @"Где находимся"]
+#define menuGrannysLinks @[@"grannys", @"g_gallery", @"g_video", @"g_order", @"g_menu", @"g_place"]
+#define menuGrannysImages @[@"icon1", @"icon3", @"icon14", @"icon4", @"icon5", @"icon2"]
+//#define menuGrannys @[@"О заведении", @"Фотогалерея",@"Видео", @"Забронировать столик", @"Меню", @"Где находимся"]
+//#define menuGrannysLinks @[@"grannys", @"g_gallery",@"g_video", @"g_order", @"g_menu", @"g_place"]
+//#define menuGrannysImages @[@"icon1", @"icon3",@"icon3", @"icon4", @"icon5", @"icon2"]
+
+//bar service
+#define menuBarservice @[@"О Bar Service", @"Магазин", @"Учебный центр", @"Выездной бар",  @"Где находимся", @"Галерея", @"Видео"]
+#define menuBarserviceLinks @[@"barservice", @"b_shop", @"b_school", @"b_events",  @"b_place", @"b_gallery", @"b_video"]
+#define menuBarserviceImages @[@"icon1",@"icon6", @"icon7", @"icon8",  @"icon2", @"icon3", @"icon14"]
+//#define menuBarservice @[@"О Bar Service", @"Магазин", @"Учебный центр", @"Выездной бар",  @"Где находимся", @"Галерея", @"Видео"]
+//#define menuBarserviceLinks @[@"barservice", @"b_shop", @"b_school", @"b_events",  @"b_place", @"b_gallery", @"b_video"]
+//#define menuBarserviceImages @[@"icon1",@"icon6", @"icon7", @"icon8",  @"icon2", @"icon3", @"icon3",]
+
+//party bus
+#define menuPartybus @[@"О Party Bus",@"Заказать вечеринку",  @"Галерея",  @"Видео"]
+#define menuPartybusLinks @[@"partybus", @"p_order", @"p_gallery",  @"p_video"]
+#define menuPartybusImages @[@"icon1", @"icon9",  @"icon3",  @"icon14"]
+//#define menuPartybus @[@"О Party Bus",@"Заказать вечеринку",  @"Галерея", @"Видео"]
+//#define menuPartybusLinks @[@"partybus", @"p_order", @"p_gallery", @"p_video"]
+//#define menuPartybusImages @[@"icon1", @"icon9",  @"icon3", @"icon3"]
+
+//iceman
+#define menuIceman @[@"О IceMan", @"Заказать лёд", @"Поиск точки продаж", @"Контакты"]
+#define menuIcemanLinks @[@"iceman", @"i_order", @"i_place",@"i_contacts"]
+#define menuIcemanImages @[@"icon1", @"icon11", @"icon13", @"icon10"]
+
+
+
+// настройки barservice VIEW
+
+#define leftPadding 9.5
+#define topPadding 15
+#define bottomPadding 35
+#define bottomMargin 35
+#define borderRadius 7
+
+// google map
+#define APIKeyGoogleMap @"AIzaSyA-hwVQN3nzF9wRIobd-blZ3_L3-DOrYBo"
+
+
+// настройки Order
+
+#define paddingLeft 15
+#define space_Y 14
+#define paddingBottom 30
+
+
+// настройки картинок для категорий меню
+#define categoryImages @[@"alcoholic_cocktails", @"non-alcoholic_cocktails", @"chiken", @"snacks", @"salads", @"desserts", @"Soup", @"pasta", @"hot", @"gorshok", @"burger", @"snack", @"pizza"]
+
+// slider in view INFO (grannys, partybus)
+#define top_padding_beetwen_objects 14
+#define padding_left 15
+
+
+#define IS_IPAD    (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad)
+#define IS_RETINA ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] && ([UIScreen mainScreen].scale == 2.0))
+
+#define PRICE_OF_PARTYBUS 8000
+

@@ -1,0 +1,262 @@
+//
+//  OrderGrannysController.m
+//  barservice
+//
+//  Created by Leonid Minderov on 07.03.14.
+//  Copyright (c) 2014 A-Mobile LLC. All rights reserved.
+//
+
+#import "OrderGrannysController.h"
+
+
+@interface OrderGrannysController ()
+
+@end
+
+@implementation OrderGrannysController
+@synthesize monthArray;
+@synthesize type_order;
+
+
+
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        content_height = 0;
+        
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.type_order = [[gTextField alloc] init];
+    self.type_order.text = @"Заказ столика Grannys Bar";
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    content_height+=space_Y;
+    
+    self.monthArray=[[NSArray alloc] initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8 и более", nil];
+  
+    
+    //name
+    
+    gLabel *nameLabel = [[gLabel alloc] initWithFrame:CGRectMake(paddingLeft, content_height, self.viewScroll.frame.size.width-(2*paddingLeft), 14)];
+    nameLabel.text=@"Как Вас зовут?";
+    content_height+=nameLabel.frame.size.height + space_Y;
+    
+    
+    gTextField *nameField = [[gTextField alloc] initWithFrame:CGRectMake(paddingLeft, content_height, self.viewScroll.frame.size.width-(2*paddingLeft), 45)];
+    nameField.delegate = self;
+    nameField.text = ([[userDefaults objectForKey:@"name"] length]) ? [userDefaults objectForKey:@"name"] : @"";
+    
+    
+    content_height+=nameField.frame.size.height + space_Y;
+    
+    
+    
+    //phone
+    
+    gLabel *phoneLabel = [[gLabel alloc] initWithFrame:CGRectMake(paddingLeft, content_height, self.viewScroll.frame.size.width-(2*paddingLeft), 14)];
+    phoneLabel.text=@"Ваш номер телефона?";
+    content_height+=phoneLabel.frame.size.height + space_Y;
+    
+    
+    phoneField = [[gTextField alloc] initWithFrame:CGRectMake(paddingLeft, content_height, self.viewScroll.frame.size.width-(2*paddingLeft), 45)];
+    phoneField.delegate = self;
+    phoneField.keyboardType = UIKeyboardTypeNumberPad;
+    phoneField.text = ([[userDefaults objectForKey:@"phone"] length]) ? [userDefaults objectForKey:@"phone"] : @"";
+    content_height+=phoneField.frame.size.height + space_Y;
+    
+    
+    // mans
+    gLabel *mansLabel = [[gLabel alloc] initWithFrame:CGRectMake(paddingLeft, content_height, self.viewScroll.frame.size.width-(2*paddingLeft), 14)];
+    mansLabel.text=@"Сколько Вас человек?";
+    content_height+=mansLabel.frame.size.height + space_Y;
+    
+    
+   mansField = [[gTextField alloc] initWithFrame:CGRectMake(paddingLeft, content_height, self.viewScroll.frame.size.width-(2*paddingLeft), 45)];
+    mansField.delegate = self;
+    mansField.text=@"1";
+    [mansField makeDownArrow];
+    content_height+=mansField.frame.size.height + paddingBottom;
+    
+    NSLog(@"%@",self.type_order);
+    
+    [self.fieldsForSend setDictionary:@{@"name": nameField, @"phone": phoneField, @"params[mans]": mansField, @"service_name": self.type_order}];
+  //  fieldArray = [NSArray arrayWithObjects: nameField, phoneField, mansField, nil];
+    
+    UIView *backgroundPlace= [self makeMainBackgroundwithBorder:YES andHeightIs:content_height andSwitchType:@"grannys"];
+    [backgroundPlace addSubview:nameLabel];
+    [backgroundPlace addSubview:nameField];
+    [backgroundPlace addSubview:phoneLabel];
+    [backgroundPlace addSubview:phoneField];
+    [backgroundPlace addSubview:mansLabel];
+    [backgroundPlace addSubview:mansField];
+    
+    
+    [self.fieldsForSend allValues];
+    UIView *buttonReserve = [self makeReserveButtonByPositionAtY:backgroundPlace.frame.size.height-50 andAction:@"goToReserveWithSendData" withTitle:@"Заказать столик"];
+    
+//    for(id subview in buttonReserve.subviews)
+//    {
+//        if([subview isKindOfClass:[UIButton class]])
+//        {
+//            UIButton *tmpButton = subview;
+//            tmpButton
+//        }
+//    }
+    
+    [self.viewScroll addSubview:buttonReserve];
+    [self.viewScroll addSubview:backgroundPlace];
+    
+	// Do any additional setup after loading the view.
+}
+
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [self resizeContentWithKeyboard:YES];
+}
+
+
+
+
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [self resizeContentWithKeyboard:NO];
+}
+
+-(void)goToReserveWithSendData
+{
+    // делаем валидацию
+    
+    if(![self validateFields])
+        [super goToReserveWithSendData];
+}
+
+#pragma mark - UITextField
+
+
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    if([textField isEqual:mansField])
+    {
+        [self showPicker:textField];
+        if(mansField.text.length>=1){
+            [monthPickerView selectRow:[self.monthArray indexOfObject:mansField.text] inComponent:0 animated:NO];
+        }
+            }
+    return YES;
+}
+
+
+- (void)showPicker:(id)sender {
+    monthPickerView = [[UIPickerView alloc] init];
+    monthPickerView.showsSelectionIndicator = YES;
+    monthPickerView.dataSource = self;
+    monthPickerView.delegate = self;
+    
+  
+    
+    
+    //set picker view inside the input view of the textfield
+    mansField.inputView = monthPickerView;
+   // mansField.inputAccessoryView = pickerToolbar;
+}
+
+-(void)doneClicked:(id) sender
+{
+    
+    [mansField resignFirstResponder];
+}
+
+
+- (BOOL) textFieldShouldReturn:(UITextField *) textField {
+    
+    BOOL didResign = [textField resignFirstResponder];
+    if (!didResign)
+    {
+        return NO;
+    }
+    
+    NSUInteger index = [[self.fieldsForSend allValues] indexOfObject:textField];
+    
+    
+    
+    
+    
+    
+    id nextField = [[self.fieldsForSend allValues] objectAtIndex:index + 1];
+    //activeField = nextField;
+    [nextField becomeFirstResponder];
+    [self resizeContentWithKeyboard:NO];
+    return NO;
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    
+    
+    if([textField isEqual:phoneField])
+    {
+        NSUInteger newLength = [textField.text length] + [string length] - range.length;
+        
+        
+        
+        if(newLength == 11)
+        {
+            textField.text = [NSString stringWithFormat:@"%@%@",textField.text, string];
+            [self textFieldShouldReturn:textField];
+            return NO;
+        }
+        else if(newLength > 11)
+        {
+            
+            // id nextField = [fieldArray objectAtIndex:index + 1];
+            [self textFieldShouldReturn:textField];
+            
+            return NO;
+            // return YES;
+        }
+    }
+   
+    
+        
+    
+    
+    return YES;
+}
+
+
+#pragma mark - UIPickerView
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView;
+{
+    return 1;
+}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    mansField.text = [monthArray objectAtIndex:row];
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component;
+{
+    return [monthArray count];
+}
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component;
+{
+    return [monthArray objectAtIndex:row];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+@end

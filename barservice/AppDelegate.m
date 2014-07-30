@@ -7,15 +7,41 @@
 //
 
 #import "AppDelegate.h"
+#import "ECSlidingViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+   
     return YES;
 }
-							
+
+
+//-(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+//{
+//    NSString *UUIDString = nil;
+//  //  NSLog(@"DEVICE TOKEN = %@", deviceToken);
+//   UUIDString  = [[NSUUID UUID] UUIDString];
+//    NSString *string = [NSString stringWithFormat:@"?deviceToken=%@&device=%@",deviceToken, UUIDString];
+//    NSLog(@"%@",string);
+//    string = [string substringWithRange:NSMakeRange(1, string.length-2)];
+//    string = [string stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//    
+//    NSString *url = [NSString stringWithFormat:@"%@/site/adddevicetoken/%@",domain_server_api,string];
+//    
+//    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+//    
+//    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue currentQueue] completionHandler:^(NSURLResponse *urlResponse, NSData *data, NSError *error) {
+//        if(error)
+//        {
+//            NSLog(@"error!");
+//        }
+//    }];
+//    
+//}
+
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

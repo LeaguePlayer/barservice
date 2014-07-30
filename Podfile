@@ -1,0 +1,7 @@
+platform :ios, '7.0'
+pod 'ECSlidingViewController', '~> 2.0.1'
+pod 'MWPhotoBrowser'
+pod 'DTCoreText'
+pod 'MKNetworkKit'
+pod 'Google-Maps-iOS-SDK'
+pod 'AFNetworking', '~> 2.0'
