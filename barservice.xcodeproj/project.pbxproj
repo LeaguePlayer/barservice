@@ -2024,14 +2024,14 @@
 			baseConfigurationReference = 1ABBA3777A3F4DF1A41399A8 /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vitaly Vegera (TFBANDHJW8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Vitaly Vegera (TFBANDHJW8)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "barservice/barservice-Prefix.pch";
 				INFOPLIST_FILE = "barservice/barservice-Info.plist";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "70B92B5E-0697-4D3C-8636-BC92FA7EE6D7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2041,14 +2041,14 @@
 			baseConfigurationReference = 1ABBA3777A3F4DF1A41399A8 /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vitaly Vegera (TFBANDHJW8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Vitaly Vegera (TFBANDHJW8)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "barservice/barservice-Prefix.pch";
 				INFOPLIST_FILE = "barservice/barservice-Info.plist";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "70B92B5E-0697-4D3C-8636-BC92FA7EE6D7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
